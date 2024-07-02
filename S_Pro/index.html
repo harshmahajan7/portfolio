@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shop Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f8f8;
+            padding: 10px 20px;
+        }
+
+        .logo img {
+            width: 150px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            width: 200px;
+        }
+
+        .cart-icon a {
+            color: #333;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+
+        .featured-products, .categories {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 200px;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .category-list a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Your Shop Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li class="cart-icon"><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+        </div>
+    </header>
+    
+    <main>
+        <section class="banner">
+            <img src="banner.jpg" alt="Banner">
+        </section>
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <!-- Repeat this block for each product -->
+                <div class="product-item">
+                    <img src="product1.jpg" alt="Product 1">
+                    <h3>Product Name 1</h3>
+                    <p>$Price</p>
+                    <a href="product-detail.html">View Details</a>
+                </div>
+                <!-- End of product block -->
+            </div>
+        </section>
+        <section class="categories">
+            <h2>Shop by Category</h2>
+            <div class="category-list">
+                <a href="category.html">Pulses</a>
+                <a href="grains.html">Grains</a>
+                <a href="category.html">Cereals</a>
+                <a href="category.html">Beans</a>
+                <a href="category.html">Dal</a>
+                <a href="roastedchanna.html">Roasted Channa</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-info">
+            <p>Contact us: email@example.com | +123-456-7890</p>
+            <p>&copy; 2024 Your Shop Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Channa Delight</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            color: #fff;
+        }
+
+        .logo img {
+            width: 50px;
+            border-radius: 25px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f0f0f0;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .cart-icon a {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .about {
+            padding: 50px 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .about h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .team-member {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-info {
+            font-size: 14px;
+        }
+
+        .footer-info p {
+            margin: 5px 0;
+        }
+
+        .footer-info a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-info a:hover {
+            color: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="image/logo.png" alt="Channa Delight Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+        </div>
+    </header>
+    
+    <main>
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Welcome to Channa Delight! We are a passionate team dedicated to bringing you the finest quality roasted channa. Our mission is to provide healthy, delicious, and flavorful snacks that cater to every taste bud.</p>
+            <p>At Channa Delight, we offer an array of roasted channa in four exciting varieties:</p>
+            <ul>
+                <li><strong>Salted:</strong> A classic and timeless flavor that everyone loves.</li>
+                <li><strong>Peri Peri:</strong> For those who enjoy a spicy kick.</li>
+                <li><strong>Hing:</strong> A unique and aromatic flavor that stands out.</li>
+                <li><strong>Plain:</strong> Pure and simple, for the purists.</li>
+            </ul>
+            <h3>Our Commitment</h3>
+            <p>We believe in maintaining the highest standards of quality and hygiene. Each batch of our roasted channa is carefully prepared to ensure it meets our rigorous standards. We source the best ingredients to bring you a snack that is not only tasty but also healthy.</p>
+            <h3>Our Team</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="image/user.png" alt="John Doe">
+                    <h4>John Doe</h4>
+                    <p>CEO</p>
+                    <p>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
+                </div>
+                <div class="team-member">
+                    <img src="image/user.png" alt="Jane Smith">
+                    <h4>Jane Smith</h4>
+                    <p>COO</p>
+                    <p>Email: <a href="mailto:jane.smith@example.com">jane.smith@example.com</a></p>
+                </div>
+                <div class="team-member">
+                    <img src="image/user.png" alt="Michael Johnson">
+                    <h4>Michael Johnson</h4>
+                    <p>CFO</p>
+                    <p>Email: <a href="mailto:michael@example.com">michael@example.com</a></p>
+                </div>
+            </div>
+            <h3>Contact Us</h3>
+            <p>If you have any questions or would like to know more about our products, feel free to reach out:</p>
+            <p>Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
+            <p>Phone: +123-456-7890</p>
+            <p>Address: 123 Main Street, City, Country</p>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-info">
+            <p>Contact us: <a href="mailto:email@example.com">email@example.com</a> | +123-456-7890</p>
+            <p>&copy; 2024 Channa Delight. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

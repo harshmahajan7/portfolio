@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #1a1a1a;
+        color: #f2f2f2;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      body.light-mode {
+        background-color: #f2f2f2;
+        color: #1a1a1a;
+      }
+      header {
+        background-color: #1a1a1a;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #333;
+        transition: background-color 0.3s;
+      }
+      header.light-mode {
+        background-color: #f2f2f2;
+        border-bottom: 2px solid #ccc;
+      }
+      header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+      }
+      header nav ul li {
+        margin: 0 20px;
+      }
+      header nav ul li a {
+        color: inherit;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+      header nav ul li a:hover {
+        color: #ff9900;
+      }
+      .theme-toggle {
+        cursor: pointer;
+        font-size: 22px;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+      .theme-toggle:hover {
+        color: #ff9900;
+      }
+      .social-icons {
+        display: flex;
+        align-items: center;
+      }
+      .social-icons a {
+        margin-left: 20px;
+        color: inherit;
+        transition: color 0.3s;
+      }
+      .social-icons a:hover {
+        color: #ff9900;
+      }
+      #hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100vh;
+        padding: 0 50px;
+        background-size: cover;
+        background-position: center;
+        transition: background 0.3s;
+      }
+
+      #hero .content {
+        max-width: 600px;
+      }
+      #hero h1 {
+        font-size: 48px;
+        margin: 0;
+      }
+      #hero p {
+        font-size: 18px;
+        margin: 20px 0;
+      }
+      #hero .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        color: #000;
+        background-color: #fff;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Logo</div>
+      <nav>
+        <ul>
+          <li class="theme-toggle" onclick="toggleTheme()">☀️</li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#contact">Contacts</a></li>
+          <li class="social-icons">
+            <a href="https://www.instagram.com/" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://x.com/i/flow/login" target="_blank">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="hero">
+      <div class="content">
+        <p>Hi, I'M Harsh Mahajan</p>
+        <h1>I'M A WEB DESIGNER</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+          vulputate libero et velit interdum, ac aliquet odio mattis.
+        </p>
+        <a href="project.html" class="btn" onclick="setNavigationState()"
+          >VIEW MY PROJECTS</a
+        >
+      </div>
+      <div class="image">
+        <img
+          src="image/WhatsApp_Image_2024-07-01_at_19.56.02_7289bb83-removebg-preview.png"
+          alt="Your Image"
+          style="max-width: 80%; border-radius: 10px"
+        />
+        <!-- Replace with actual image URL -->
+      </div>
+    </section>
+    <script>
+      function toggleTheme() {
+        const isLightMode = document.body.classList.toggle("light-mode");
+        document.querySelector("header").classList.toggle("light-mode");
+        const themeToggle = document.querySelector(".theme-toggle");
+        themeToggle.textContent = isLightMode ? "🌙" : "☀️";
+        localStorage.setItem("theme", isLightMode ? "light" : "dark");
+      }
+
+      function setNavigationState() {
+        localStorage.setItem("navState", window.scrollY);
+      }
+
+      function applyTheme() {
+        const theme = localStorage.getItem("theme");
+        if (theme === "light") {
+          document.body.classList.add("light-mode");
+          document.querySelector("header").classList.add("light-mode");
+          document.querySelector(".theme-toggle").textContent = "🌙";
+        }
+      }
+
+      function restoreNavigationState() {
+        const navState = localStorage.getItem("navState");
+        if (navState) {
+          window.scrollTo(0, parseInt(navState, 10));
+        }
+      }
+      function toggleTheme() {
+        document.body.classList.toggle("light-mode");
+        document.querySelector("header").classList.toggle("light-mode");
+        const themeToggle = document.querySelector(".theme-toggle");
+        themeToggle.textContent = document.body.classList.contains("light-mode")
+          ? "🌙"
+          : "☀️";
+        localStorage.setItem(
+          "theme",
+          document.body.classList.contains("light-mode") ? "light" : "dark"
+        );
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        if (localStorage.getItem("theme") === "light") {
+          document.body.classList.add("light-mode");
+          document.querySelector("header").classList.add("light-mode");
+          document.querySelector(".theme-toggle").textContent = "🌙";
+        }
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+        applyTheme();
+        restoreNavigationState();
+      });
+    </script>
+  </body>
+</html>
